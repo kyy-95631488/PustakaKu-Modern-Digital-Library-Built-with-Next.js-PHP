@@ -17,7 +17,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/images/logo-hr.png" sizes="any" />
+        <link rel="icon" href="/images/icon-pustakaku-transparan.png" sizes="any" />
       </head>
       <body className={inter.className}>{children}</body>
     </html>

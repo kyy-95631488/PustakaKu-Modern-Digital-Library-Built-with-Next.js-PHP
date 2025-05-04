@@ -1,43 +1,73 @@
-// Footer.js
 import React from "react";
+import { motion } from "framer-motion";
 
 export default function Footer() {
   return (
     <footer className="bg-[#1A1A1A] text-white py-8 px-6 mt-16 relative">
       <div className="container mx-auto text-center">
-        <div className="text-2xl font-bold mb-4 animate__animated animate__fadeIn animate__delay-1s">
+        <motion.div
+          className="text-2xl font-bold mb-4"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           Pustakaku - Your Digital Library
-        </div>
-        <p className="mb-6 text-lg opacity-80 animate__animated animate__fadeIn animate__delay-2s">
+        </motion.div>
+        <motion.p
+          className="mb-6 text-lg opacity-80"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1 }}
+        >
           A place where knowledge grows and evolves.
-        </p>
+        </motion.p>
         <div className="flex justify-center space-x-6 mb-6">
-          <a
+          <motion.a
             href="#"
             className="text-white hover:text-[#1E40AF] transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
           >
             About
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#"
             className="text-white hover:text-[#1E40AF] transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
           >
             Contact
-          </a>
-          <a
+          </motion.a>
+          <motion.a
             href="#"
             className="text-white hover:text-[#1E40AF] transition-colors duration-300"
+            whileHover={{ scale: 1.1 }}
+            transition={{ duration: 0.3 }}
           >
             Privacy Policy
-          </a>
+          </motion.a>
         </div>
-        <div className="animate__animated animate__fadeIn animate__delay-3s">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 1.5 }}
+        >
           <p className="opacity-60 text-sm">
-            &copy; 2025 Pustakaku. All rights reserved.
+            &copy; 2025 PustakaKu. All rights reserved.
           </p>
-        </div>
+        </motion.div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-1 bg-blue-400 animate__animated animate__pulse animate__infinite"></div>
+      <motion.div
+        className="absolute bottom-0 left-0 w-full h-1 bg-blue-400"
+        animate={{
+          scaleX: [1, 1.1, 1],
+        }}
+        transition={{
+          duration: 1.5,
+          repeat: Infinity,
+          repeatType: "loop",
+        }}
+      ></motion.div>
     </footer>
   );
 }

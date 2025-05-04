@@ -78,14 +78,13 @@ export default function RegisterPage() {
     <>
       <NavBar />
 
-      <div className="relative min-h-screen flex flex-col">
+      <div className="relative min-h-screen flex flex-col overflow-hidden">
         <div id="particles" className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none">
           {MemoizedParticles}
         </div>
 
         <motion.div
           className="flex-grow flex items-center justify-center z-10 relative px-4 py-12 pt-32 pb-24"
-          // pt-32 memberi jarak dari navbar, pb-24 memberi jarak dari footer
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}

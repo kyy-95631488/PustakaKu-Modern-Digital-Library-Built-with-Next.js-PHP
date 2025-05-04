@@ -37,7 +37,7 @@ const HeroSection = () => {
         >
           <Typewriter
             options={{
-              strings: ['Selamat Datang di <span class="text-blue-400">Pustakaku</span>'],
+              strings: ['Selamat Datang di <span class="text-blue-400">PustakaKu</span>'],
               autoStart: true,
               loop: true,
               delay: 80,
