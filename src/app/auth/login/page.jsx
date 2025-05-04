@@ -50,7 +50,7 @@ export default function LoginPage() {
   const promptVerification = async (email) => {
     try {
       showLoading();
-      const sendResp = await axios.post("http://basic-trackbacks.gl.at.ply.gg:52581/v1/auth/sendVerification/", { email });
+      const sendResp = await axios.post("https://5009-180-252-88-174.ngrok-free.app/v1/auth/sendVerification/", { email });
       hideLoading();
 
       if (!sendResp.data.success) {
@@ -71,7 +71,7 @@ export default function LoginPage() {
       if (code) {
         try {
           showLoading();
-          const resp = await axios.post("http://basic-trackbacks.gl.at.ply.gg:52581/v1/auth/verifCode/", { email, code });
+          const resp = await axios.post("https://5009-180-252-88-174.ngrok-free.app/v1/auth/verifCode/", { email, code });
           hideLoading();
 
           if (resp.data.success) {
@@ -99,7 +99,7 @@ export default function LoginPage() {
 
     try {
       showLoading();
-      const { data } = await axios.post("http://basic-trackbacks.gl.at.ply.gg:52581/v1/auth/login/", form);
+      const { data } = await axios.post("https://5009-180-252-88-174.ngrok-free.app/v1/auth/login/", form);
       hideLoading();
 
       if (!data.success && data.unverified) {
