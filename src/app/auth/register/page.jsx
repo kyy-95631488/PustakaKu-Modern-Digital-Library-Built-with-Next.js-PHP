@@ -33,7 +33,7 @@ export default function RegisterPage() {
     }
 
     try {
-      const response = await fetch("http://localhost/v1/auth/register/", {
+      const response = await fetch("http://pustakaku.rf.gd/v1/auth/register/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
