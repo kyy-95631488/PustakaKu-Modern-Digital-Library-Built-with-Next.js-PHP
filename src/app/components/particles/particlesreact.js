@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { loadSlim } from "@tsparticles/slim";
 
 const ParticlesComponent = (props) => {
-    const [setInit] = useState(false);
+    const [init, setInit] = useState(false);
     useEffect(() => {
         initParticlesEngine(async (engine) => {
             await loadSlim(engine);
@@ -508,6 +508,9 @@ const ParticlesComponent = (props) => {
         [],
     );
 
+    if (!init) {
+        return <div>Loading particles...</div>;
+    }
 
     return <Particles id={props.id} options={options} />;
 };

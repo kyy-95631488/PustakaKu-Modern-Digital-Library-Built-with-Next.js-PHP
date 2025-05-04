@@ -33,7 +33,7 @@ export default function RegisterPage() {
     }
 
     try {
-      const response = await fetch("https://pustakaku.rf.gd/v1/auth/register/", {
+      const response = await fetch("http://basic-trackbacks.gl.at.ply.gg:52581/v1/auth/register/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
